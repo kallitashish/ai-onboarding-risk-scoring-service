@@ -1,4 +1,7 @@
 AI Customer Onboarding – Risk Scoring Microservice
+
+<img width="3358" height="722" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/01e319a1-aa37-4912-bec2-5babc67c1c15" />
+
 Overview
 This project demonstrates a microservice responsible for calculating onboarding risk scores in an AI-enabled customer onboarding platform.
 
