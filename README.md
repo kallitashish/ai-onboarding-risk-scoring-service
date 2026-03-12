@@ -1,8 +1,8 @@
-AI Customer Onboarding – Risk Scoring Microservice
+**AI Customer Onboarding – Risk Scoring Microservice**
 
 <img width="3358" height="722" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/01e319a1-aa37-4912-bec2-5babc67c1c15" />
 
-Overview
+**Overview**
 This project demonstrates a microservice responsible for calculating onboarding risk scores in an AI-enabled customer onboarding platform.
 
 The service evaluates risk using:
@@ -16,10 +16,10 @@ It is implemented using:
 
 The architecture is designed so that the scoring logic can later be extended with machine learning models for fraud detection and risk prediction.
 
-Architecture Context
+**Architecture Context**
 In a typical onboarding platform, this service would sit between document verification and the decision engine.
 
-Customer Onboarding Flow
+**Customer Onboarding Flow**
 
             Customer Application
                         │
@@ -41,30 +41,16 @@ The service produces:
     onboarding decision
     explanation for auditability
 
-Project Structure
-        risk-scoring-service
-        │
-        ├── app
-        │   ├── main.py
-        │   ├── api
-        │   │   └── risk_routes.py
-        │   ├── services
-        │   │   └── risk_service.py
-        │   ├── models
-        │   │   └── risk_models.py
-        │   ├── utils
-        │   │   └── scoring_logic.py
-        │   └── core
-        │       ├── config.py
-        │       └── logging.py
-        │
-        ├── requirements.txt
-        └── README.md
+**Project Structure**
 
-Architecture follows a layered microservice design:
+  <img width="343" height="405" alt="project-structure" src="https://github.com/user-attachments/assets/43e5d2df-6ac4-48af-9333-656dbea0920b" />
+
+
+
+**Architecture follows a layered microservice design**:
         API Layer → Service Layer → Domain Logic
 
-Running the Service
+**Running the Service**
         1. Install dependencies
         pip install -r requirements.txt
         2. Start the application
@@ -73,7 +59,7 @@ Running the Service
                 FastAPI automatically generates API documentation.
                 http://localhost:8000/docs
 
-API Endpoints
+**API Endpoints**
   Health Check
   GET /health
             Response
@@ -83,7 +69,8 @@ API Endpoints
                     }
    Risk Scoring
    POST /risk/score
-        Sample Request
+
+ **Sample Request**
 
                 {
                     "customer_id": "12345",
@@ -93,7 +80,7 @@ API Endpoints
                     "ip_risk": 0.4
                 }
 
-  Sample Response
+  **Sample Response**
 
             {
                 "risk_score": 0.3,
